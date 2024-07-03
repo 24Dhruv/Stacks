@@ -1,3 +1,12 @@
+public static void reverse(Stack<Integer> s) {
+    if(s.isEmpty()) {
+        return;
+    }
+
+    int top = s.pop();
+    reverse(s);
+    pushAtBottom(s, top);
+}
 public static void main(String args[]) {
     Stack<Integer> stack = new Stack<>();
     stack.push(1);
